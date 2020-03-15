@@ -12,6 +12,14 @@ let orm = {
             cb(result);
         });
     },
+    create: (function(table, cols, values, cb) {
+        connection.query(`INSERT INTO ?? (${cols.toString()}) VALUES (?, ?)`, values, function(err, result) {
+            if (err) {
+                throw err;
+            }
+            cb(result);
+        })
+    })
 }
 
 module.exports = orm;
