@@ -15,3 +15,5 @@ router.get("/", function(request, result) {
         result.render("index", hbsObject);
     })
 })
+
+module.exports = router;
