@@ -11,7 +11,7 @@ let orm = {
             }
             cb(result);
         });
-    }
+    },
 }
 
 module.exports = orm;

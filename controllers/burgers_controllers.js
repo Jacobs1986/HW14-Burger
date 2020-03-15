@@ -15,5 +15,8 @@ router.get("/", function(request, result) {
         result.render("index", hbsObject);
     })
 })
+router.post("/api/burger", function(request, response) {
+    console.log(request);
+})
 
 module.exports = router;
