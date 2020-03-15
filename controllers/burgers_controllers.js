@@ -16,7 +16,7 @@ router.get("/", function(request, result) {
     })
 })
 router.post("/api/burgers", function(request, response) {
-    console.log(request);
+    console.log(request.body);
 })
 
 module.exports = router;
