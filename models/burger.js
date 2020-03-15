@@ -6,6 +6,12 @@ let burger = {
         orm.all("burgers", function(result) {
             cb(result);
         })
+    },
+    // create a new burger
+    create: function(cols, vals, cb) {
+        orm.create("burgers", cols, vals, function(response) {
+            cb(response);
+        });
     }
 };
 
