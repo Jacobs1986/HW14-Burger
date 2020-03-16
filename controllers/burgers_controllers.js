@@ -15,10 +15,20 @@ router.get("/", function(request, result) {
         result.render("index", hbsObject);
     })
 })
+// add a new burger
 router.post("/api/burgers", function(request, response) {
     console.log(request.body);
     burger.create(["burger_name"], [request.body.name], function(result) {
         response.json({ id: result.insertId });
+    })
+})
+
+// update eat state of burger
+router.put("/api/burgers/:id", function(request, response) {
+    let condition = `id = ${request.params.id}`;
+    console.log("condition", condition);
+    burger.update({
+        devoured: request.body.devoured
     })
 })
 
