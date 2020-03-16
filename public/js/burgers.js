@@ -21,5 +21,25 @@ $(function () {
             }
         )
     })
+    // change eaten state of burger
+    $(".change-devoured").on("click", function(event) {
+        var id = $(this).data("id");
+        var newdevour = 1;
+        console.log(`The id for ${this} is ${id}`)
+        console.log(`The new devoured state is ${newdevour}`);
 
+        let newEatState = {
+            devoured: newdevour
+        }
+
+        // send the PUT request
+        $.ajax(`/api/burgers/${id}`, {
+            type: "PUT",
+            data: newEatState
+        }).then(
+            function() {
+                console.log("changed devoured to", newdevour)
+            }
+        )
+    })
 })
