@@ -39,6 +39,7 @@ $(function () {
         }).then(
             function() {
                 console.log("changed devoured to", newdevour)
+                location.reload();
             }
         )
     })
