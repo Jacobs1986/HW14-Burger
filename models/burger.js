@@ -12,6 +12,11 @@ let burger = {
         orm.create("burgers", cols, vals, function(response) {
             cb(response);
         });
+    },
+    update: function(objColVals, condition, cd) {
+        orm.update("burgers", objColVals, condition, function(response) {
+            cb(response);
+        });
     }
 };
 
