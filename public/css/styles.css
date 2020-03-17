@@ -1,9 +1,18 @@
 /* Fonts:
     font-family: 'Akronim', cursive;
+    font-family: 'Barrio', cursive;
 */
 
 h1 {
     font-family: 'Akronim', cursive;
     font-size: 65px;
     text-align: center;
+}
+
+.center {
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Barrio', cursive;
 }
