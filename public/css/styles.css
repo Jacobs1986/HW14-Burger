@@ -4,6 +4,10 @@
     font-family: 'Jolly Lodger', cursive;
 */
 
+body {
+    background-color: darkgoldenrod;
+}
+
 h1 {
     font-family: 'Akronim', cursive;
     font-size: 65px;
